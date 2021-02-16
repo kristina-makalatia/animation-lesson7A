@@ -1,0 +1,92 @@
+.wraper {
+	width: 900px;
+	height: 700px;
+	background: lightblue;
+	position: relative;
+	/*transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	transition-delay: 2s;*/
+	-webkit-transition: all 0.5s linear 0.5s;
+	-o-transition: all 0.5s linear 0.5s;
+	transition: all 0.5s linear 0.5s;	
+}
+.child-box {
+	width: 150px;
+	height: 150px;
+	background-color: aqua;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%) rotate(45deg);
+	    -ms-transform: translate(-50%,-50%) rotate(45deg);
+	        transform: translate(-50%,-50%) rotate(45deg);
+	-webkit-transition: all 0.5s ease 0.7s;
+	-o-transition: all 0.5s ease 0.7s;
+	transition: all 0.5s ease 0.7s;
+	-webkit-animation: myanimation 3s infinite;
+	        animation: myanimation 3s infinite;
+
+
+/*	animation-name: myanimation;
+	animation-duration: 3s;
+	animation-iteration-count:infinite;*/
+}
+
+/*hover effects*/
+/*.wraper:hover {
+	background-color: red;
+}
+.child-box:hover {
+	background-color: yellow;
+	transform:  translate(-50%,-50%) rotate(360deg);
+}*/
+
+/*.wraper:hover .child-box {
+	background-color: grey;
+	width: 250px;
+	height: 200px;
+}*/
+
+.image-block {
+	height: 80px;
+	-webkit-animation: myanimation 5s infinite;
+	        animation: myanimation 5s infinite;
+	position: absolute;
+}
+.animation-block {
+	position: relative;
+	height: 200px;
+}
+
+/*keyframes*/
+@-webkit-keyframes myanimation {
+	0% {-webkit-transform: translate(-50%,-50%) rotate(45deg);transform: translate(-50%,-50%) rotate(45deg); background:lightblue;}
+	25% {-webkit-transform: translate(-50%,-50%) rotate(90deg);transform: translate(-50%,-50%) rotate(90deg); background-color: red;} 
+	50% {-webkit-transform: translate(-50%,-50%) rotate(180deg);transform: translate(-50%,-50%) rotate(180deg); background-color: yellow;}
+	75% {-webkit-transform: translate(-50%,-50%) rotate(360deg);transform: translate(-50%,-50%) rotate(360deg); background-color: black;}
+	100% {-webkit-transform: translate(-50%,-50%) rotate(90deg);transform: translate(-50%,-50%) rotate(90deg); background-color: red;}
+}
+@keyframes myanimation {
+	0% {-webkit-transform: translate(-50%,-50%) rotate(45deg);transform: translate(-50%,-50%) rotate(45deg); background:lightblue;}
+	25% {-webkit-transform: translate(-50%,-50%) rotate(90deg);transform: translate(-50%,-50%) rotate(90deg); background-color: red;} 
+	50% {-webkit-transform: translate(-50%,-50%) rotate(180deg);transform: translate(-50%,-50%) rotate(180deg); background-color: yellow;}
+	75% {-webkit-transform: translate(-50%,-50%) rotate(360deg);transform: translate(-50%,-50%) rotate(360deg); background-color: black;}
+	100% {-webkit-transform: translate(-50%,-50%) rotate(90deg);transform: translate(-50%,-50%) rotate(90deg); background-color: red;}
+}
+
+/*@keyframes imageanimation {
+	0% {transform: translateX(50px); }
+	25% {transform: translateX(150px);}
+	50% {transform: translateX(350px);}
+	80% {transform: translateX(550px);}
+	100% {transform: translateX(750px);}
+}*/
+
+@keyframes myanimation {
+	0% {left: 50px; -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+	25% {left: 150px;-webkit-transform: rotate(45deg);transform: rotate(45deg);}
+	50% {left: 350px; -webkit-transform: rotate(90deg); transform: rotate(90deg);}
+	80% {left:550px; -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+	100% {left: 750px; -webkit-transform: rotate(45deg); transform: rotate(45deg);}
+}
